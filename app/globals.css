@@ -1,26 +1,121 @@
 @import "tailwindcss";
 
 :root {
+  /* Define Gold explicitly */
+  --gold: #D4AF37;
+
+  /* Base */
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Card */
+  --card: #ffffff;
+  --card-foreground: #171717;
+
+  /* Popover */
+  --popover: #ffffff;
+  --popover-foreground: #171717;
+
+  /* Primary - Mapped to Gold */
+  --primary: var(--gold);
+  --primary-foreground: #ffffff;
+
+  /* Secondary - Light Gold/Beige */
+  --secondary: #F9F0C2;
+  --secondary-foreground: #171717;
+
+  /* Muted */
+  --muted: #f5f5f5;
+  --muted-foreground: #737373;
+
+  /* Accent */
+  --accent: #F3E5AB;
+  --accent-foreground: #171717;
+
+  /* Destructive */
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+
+  /* Border/Input/Ring */
+  --border: #e5e5e5;
+  --input: #e5e5e5;
+  --ring: var(--gold);
+
+  /* Charts */
+  --chart-1: #D4AF37;
+  --chart-2: #C5A028;
+  --chart-3: #B69121;
+  --chart-4: #F3E5AB;
+  --chart-5: #F9F0C2;
+
+  /* Radius */
+  --radius: 0.5rem;
 }
 
-@theme inline {
+@theme {
+  --color-gold: var(--gold);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --font-sans: var(--font-quicksand);
+  --font-heading: var(--font-montserrat);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Explicit Global Classes as requested */
+.text-gold {
+  color: var(--gold);
 }
+
+.bg-gold {
+  background-color: var(--gold);
+}
+
+.border-gold {
+  border-color: var(--gold);
+}
+
+/* Force light theme for now to ensure Gold/White aesthetic */
+/* @media (prefers-color-scheme: dark) { ... } REMOVED to prevent unwanted black backgrounds */
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  border-color: var(--border);
 }
