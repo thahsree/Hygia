@@ -119,3 +119,20 @@ body {
   color: var(--foreground);
   border-color: var(--border);
 }
+
+/* ─── Container fix for Tailwind v4 ─────────────────────────────────────────
+   In v4, `container` only sets width:100%. This restores v3-style behaviour:
+   centred, padded, and max-width capped per breakpoint.
+──────────────────────────────────────────────────────────────────────────── */
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+  width: 100%;
+  max-width: 1280px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-inline: 1.5rem;
+  }
+}
