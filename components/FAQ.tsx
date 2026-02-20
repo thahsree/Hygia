@@ -32,7 +32,7 @@ export const FAQ = () => {
                 >
                   <span className="text-lg font-semibold text-gray-700 tracking-wide">{faq.question}</span>
                   <ChevronDown
-                    className={`w-5 h-5 text-primary transition-transform duration-300 ${
+                    className={`w-7 h-7 text-primary transition-transform duration-300 flex-shrink-0 ${
                       openIndex === index ? "rotate-180" : ""
                     }`}
                   />

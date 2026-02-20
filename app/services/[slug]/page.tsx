@@ -21,14 +21,28 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <Navbar />
       
       <div className="pt-20">
-        <div className="bg-primary text-primary-foreground py-20">
-          <div className="container mx-auto px-4 md:px-6">
-            <Link href="/#services" className="inline-flex items-center text-white/90 hover:text-white mb-6 transition-colors">
+        <div className="relative py-20 overflow-hidden">
+          {/* Gradient background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-amber-100 via-yellow-50 to-stone-200" />
+          {/* Decorative orbs */}
+          <div className="absolute top-0 right-0 w-72 h-72 rounded-full bg-primary/20 blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-80 h-64 rounded-full bg-amber-200/40 blur-3xl" />
+          {/* Dot pattern */}
+          <div
+            className="absolute inset-0 opacity-20"
+            style={{
+              backgroundImage: "radial-gradient(circle, #d4af37 1px, transparent 1px)",
+              backgroundSize: "32px 32px",
+            }}
+          />
+          {/* Content */}
+          <div className="relative z-10 container mx-auto px-4 md:px-6">
+            <Link href="/services" className="inline-flex items-center text-primary hover:text-primary/80 mb-6 transition-colors font-medium">
               <ArrowLeft className="w-4 h-4 mr-2" /> Back to Services
             </Link>
             <Section>
-              <h1 className="text-4xl md:text-5xl font-heading font-bold mb-4 tracking-wide">{service.title}</h1>
-              <p className="text-xl text-white/90 max-w-2xl tracking-wide">{service.description}</p>
+              <h1 className="text-4xl md:text-5xl font-heading font-bold mb-4 tracking-wide text-gray-700">{service.title}</h1>
+              <p className="text-xl text-gray-500 max-w-2xl tracking-wide">{service.description}</p>
             </Section>
           </div>
         </div>

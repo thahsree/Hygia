@@ -25,13 +25,27 @@ export default function ServicesPage() {
       <Navbar />
 
       {/* Hero Banner */}
-      <div className="bg-primary text-primary-foreground pt-32 pb-16">
-        <div className="container mx-auto px-4 md:px-6 text-center">
+      <div className="relative pt-32 pb-16 overflow-hidden">
+        {/* Gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-amber-100 via-yellow-50 to-stone-200" />
+        {/* Decorative orbs */}
+        <div className="absolute top-0 right-0 w-72 h-72 rounded-full bg-primary/20 blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-80 h-64 rounded-full bg-amber-200/40 blur-3xl" />
+        {/* Dot pattern */}
+        <div
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage: "radial-gradient(circle, #d4af37 1px, transparent 1px)",
+            backgroundSize: "32px 32px",
+          }}
+        />
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4 md:px-6 text-center">
           <Section>
-            <h1 className="text-5xl max-md:text-4xl max-sm:text-3xl font-heading font-bold tracking-wide mb-4">
+            <h1 className="text-5xl max-md:text-4xl max-sm:text-3xl font-heading font-bold tracking-wide mb-4 text-gray-700">
               Our Services
             </h1>
-            <p className="text-xl text-white/90 max-w-2xl mx-auto tracking-wide">
+            <p className="text-xl text-gray-500 max-w-2xl mx-auto tracking-wide">
               Professional cleaning solutions for every space — delivered with care, precision, and eco-friendly products.
             </p>
           </Section>
