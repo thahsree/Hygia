@@ -53,13 +53,27 @@ export default function BookingPage() {
       <Navbar />
 
       {/* Hero Banner */}
-      <div className="bg-primary text-primary-foreground pt-32 pb-16">
-        <div className="container mx-auto px-4 md:px-6 text-center">
+      <div className="relative pt-32 pb-16 overflow-hidden">
+        {/* Gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-amber-100 via-yellow-50 to-stone-200" />
+        {/* Decorative orbs */}
+        <div className="absolute top-0 right-0 w-72 h-72 rounded-full bg-primary/20 blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-80 h-64 rounded-full bg-amber-200/40 blur-3xl" />
+        {/* Dot pattern */}
+        <div
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage: "radial-gradient(circle, #d4af37 1px, transparent 1px)",
+            backgroundSize: "32px 32px",
+          }}
+        />
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4 md:px-6 text-center">
           <Section>
-            <h1 className="text-5xl max-md:text-4xl max-sm:text-3xl font-heading font-bold tracking-wide mb-4">
+            <h1 className="text-5xl max-md:text-4xl max-sm:text-3xl font-heading font-bold tracking-wide mb-4 text-gray-700">
               Book a Service
             </h1>
-            <p className="text-xl text-white/90 max-w-2xl mx-auto tracking-wide">
+            <p className="text-xl max-md:text-lg max-sm:text-base text-gray-500 max-w-2xl mx-auto tracking-wide">
               Fill in the form below and we'll get back to you shortly to confirm your booking.
             </p>
           </Section>
@@ -244,7 +258,7 @@ export default function BookingPage() {
                   Call us directly to discuss your cleaning needs and get an instant quote:
                 </p>
                 <a
-                  href="tel:+919633702776"
+                  href="tel:+917012003092"
                   className="flex items-center gap-3 bg-primary/10 hover:bg-primary/20 transition rounded-xl px-5 py-4 group"
                 >
                   <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
@@ -253,7 +267,7 @@ export default function BookingPage() {
                   <div>
                     <p className="text-xs text-gray-500 tracking-wide">Call us</p>
                     <p className="text-lg font-semibold text-gray-700 tracking-wide group-hover:text-primary transition">
-                      +91 9633702776
+                      +91 7012003092
                     </p>
                   </div>
                 </a>

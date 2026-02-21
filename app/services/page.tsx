@@ -45,7 +45,7 @@ export default function ServicesPage() {
             <h1 className="text-5xl max-md:text-4xl max-sm:text-3xl font-heading font-bold tracking-wide mb-4 text-gray-700">
               Our Services
             </h1>
-            <p className="text-xl text-gray-500 max-w-2xl mx-auto tracking-wide">
+            <p className="text-xl max-md:text-lg max-sm:text-base text-gray-500 max-w-2xl mx-auto tracking-wide">
               Professional cleaning solutions for every space — delivered with care, precision, and eco-friendly products.
             </p>
           </Section>

@@ -10,7 +10,7 @@ export const services = [
             "Dusting and wiping all surfaces",
             "Vacuuming and mopping floors",
             "Kitchen deep cleaning (appliances, cabinets)",
-            "Bathroom sanitization (tojolet, shower, sink)",
+            "Bathroom sanitization (toilet, shower, sink)",
             "Window sill and frame cleaning",
             "Cobweb removal"
         ]

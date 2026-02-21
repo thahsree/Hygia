@@ -98,7 +98,7 @@ export const Navbar = () => {
                   {link.name}
                 </Link>
               ))}
-              <a href="tel:+919633702776">
+              <a href="tel:+917012003092">
                 <Button className="w-full bg-primary hover:bg-primary/90 mt-2">
                   Book Now
                 </Button>

@@ -42,7 +42,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             </Link>
             <Section>
               <h1 className="text-4xl md:text-5xl font-heading font-bold mb-4 tracking-wide text-gray-700">{service.title}</h1>
-              <p className="text-xl text-gray-500 max-w-2xl tracking-wide">{service.description}</p>
+              <p className="text-xl max-md:text-lg max-sm:text-base text-gray-500 max-w-2xl tracking-wide">{service.description}</p>
             </Section>
           </div>
         </div>
@@ -73,12 +73,16 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                     Get a sparkling clean space today. Contact us for a free quote tailored to your needs.
                   </p>
                   <div className="flex flex-wrap gap-4">
-                    <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                      Book Now
-                    </Button>
-                    <Button size="lg" variant="outline" className="bg-white border-primary/20 text-primary hover:bg-secondary/50">
-                      <Phone className="w-4 h-4 mr-2" /> Call Us
-                    </Button>
+                     <Link href="/booking">
+                       <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                         Book Now
+                       </Button>
+                     </Link>
+                     <a href="tel:+917012003092">
+                       <Button size="lg" variant="outline" className="bg-white border-primary/20 text-primary hover:bg-secondary/50">
+                         <Phone className="w-4 h-4 mr-2" /> Call Us
+                       </Button>
+                     </a>
                   </div>
                 </div>
               </Section>

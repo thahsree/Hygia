@@ -46,7 +46,7 @@ export const FAQ = () => {
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
-                      <div className="p-6 pt-0 text-lg text-gray-500 bg-white border-t border-gray-100 tracking-wide">
+                      <div className="p-6 py-2 text-lg text-gray-500 bg-white border-t border-gray-100 tracking-wide">
                         {faq.answer}
                       </div>
                     </motion.div>
