@@ -47,10 +47,10 @@ export default function AboutPage() {
               <Star className="w-3.5 h-3.5 fill-primary" />
               ABOUT HYGIA
             </div>
-            <h1 className="text-6xl max-md:text-4xl max-sm:text-3xl font-heading font-bold text-gray-700 tracking-wide leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-gray-700 tracking-wide leading-tight">
               Hygia Team
             </h1>
-            <p className="text-2xl max-md:text-xl text-gray-600 mt-3 tracking-wide font-medium">
+            <p className="text-lg md:text-xl lg:text-2xl text-gray-600 mt-3 tracking-wide font-medium">
               Ready to Revive Your Spaces
             </p>
           </Section>
@@ -62,20 +62,20 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto space-y-8">
             <Section delay={0.1}>
-              <p className="text-lg max-md:text-base text-gray-500 leading-relaxed tracking-wide">
+              <p className="text-base md:text-lg text-gray-500 leading-relaxed tracking-wide">
                 At Hygia, we specialize in revitalizing homes and businesses with top-notch deep cleaning services.
                 Our experienced team is dedicated to transforming your living and working spaces into pristine environments.
               </p>
             </Section>
             <Section delay={0.2}>
-              <p className="text-lg max-md:text-base text-gray-500 leading-relaxed tracking-wide">
+              <p className="text-base md:text-lg text-gray-500 leading-relaxed tracking-wide">
                 Founded with a mission to provide exceptional cleaning services, we combine industry expertise with
                 attention to detail to deliver results that exceed expectations. Our team undergoes rigorous training
                 and uses only the best equipment and eco-friendly products.
               </p>
             </Section>
             <Section delay={0.3}>
-              <p className="text-lg max-md:text-base text-gray-500 leading-relaxed tracking-wide">
+              <p className="text-base md:text-lg text-gray-500 leading-relaxed tracking-wide">
                 We believe that a clean environment contributes to better health, productivity, and overall well-being.
                 That's why we're committed to delivering cleaning services that not only meet but exceed your expectations.
               </p>
@@ -89,7 +89,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 md:px-6">
           <Section>
             <div className="text-center mb-12">
-              <h2 className="text-4xl max-md:text-3xl max-sm:text-2xl font-heading font-semibold text-gray-700 mb-4 relative py-2 after:content-[''] after:block after:w-24 after:h-1.5 after:bg-primary after:mx-auto after:mt-2 after:rounded-full tracking-wide">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-semibold text-gray-700 mb-4 relative py-2 after:content-[''] after:block after:w-24 after:h-1.5 after:bg-primary after:mx-auto after:mt-2 after:rounded-full tracking-wide">
                 What Drives Us
               </h2>
             </div>
@@ -102,10 +102,10 @@ export default function AboutPage() {
                 <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-5 text-primary">
                   <Target className="w-7 h-7" />
                 </div>
-                <h3 className="text-2xl max-md:text-xl font-heading font-semibold text-gray-700 mb-4 tracking-wide">
+                <h3 className="text-xl md:text-2xl lg:text-2xl font-heading font-semibold text-gray-700 mb-4 tracking-wide">
                   Our Mission
                 </h3>
-                <p className="text-lg max-md:text-base text-gray-500 tracking-wide leading-relaxed flex-grow">
+                <p className="text-base md:text-lg text-gray-500 tracking-wide leading-relaxed flex-grow">
                   To provide exceptional deep cleaning services that transform spaces and enhance the quality of life
                   for our clients, using eco-friendly products and professional expertise.
                 </p>
@@ -118,10 +118,10 @@ export default function AboutPage() {
                 <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-5 text-primary">
                   <Eye className="w-7 h-7" />
                 </div>
-                <h3 className="text-2xl max-md:text-xl font-heading font-semibold text-gray-700 mb-4 tracking-wide">
+                <h3 className="text-xl md:text-2xl lg:text-2xl font-heading font-semibold text-gray-700 mb-4 tracking-wide">
                   Our Vision
                 </h3>
-                <p className="text-lg max-md:text-base text-gray-500 tracking-wide leading-relaxed flex-grow">
+                <p className="text-base md:text-lg text-gray-500 tracking-wide leading-relaxed flex-grow">
                   To become the most trusted and sought-after deep cleaning service provider, recognized for our
                   commitment to excellence, reliability, and customer satisfaction.
                 </p>

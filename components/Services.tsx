@@ -13,10 +13,10 @@ export const Services = () => {
       <div className="container mx-auto px-4 md:px-6 py-16">
         <Section>
           <div className="text-center mb-16">
-            <h2 className="text-4xl max-md:text-3xl max-sm:text-2xl font-heading font-semibold text-gray-700 mb-4 relative py-2 after:content-[''] after:block after:w-24 after:h-1.5 after:bg-primary after:mx-auto after:mt-2 after:rounded-full tracking-wide">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-semibold text-gray-700 mb-4 relative py-2 after:content-[''] after:block after:w-24 after:h-1.5 after:bg-primary after:mx-auto after:mt-2 after:rounded-full tracking-wide">
               OUR SERVICES
             </h2>
-            <p className="text-xl max-md:text-lg text-gray-500 max-w-2xl mx-auto tracking-wide">
+            <p className="text-lg md:text-xl lg:text-2xl text-gray-500 max-w-2xl mx-auto tracking-wide">
               Choose from our wide range of professional cleaning solutions designed to meet every need.
             </p>
           </div>
@@ -41,7 +41,7 @@ export const Services = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="h-12 px-8 text-lg border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground transition-all tracking-wide gap-2"
+                className="h-12 px-8 text-base lg:text-lg font-semibold border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground transition-all tracking-wide gap-2"
               >
                 View All Services <ArrowRight className="w-5 h-5" />
               </Button>

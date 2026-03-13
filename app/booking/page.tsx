@@ -70,10 +70,10 @@ export default function BookingPage() {
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 md:px-6 text-center">
           <Section>
-            <h1 className="text-5xl max-md:text-4xl max-sm:text-3xl font-heading font-bold tracking-wide mb-4 text-gray-700">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold tracking-wide mb-4 text-gray-700">
               Book a Service
             </h1>
-            <p className="text-xl max-md:text-lg max-sm:text-base text-gray-500 max-w-2xl mx-auto tracking-wide">
+            <p className="text-lg md:text-xl lg:text-2xl text-gray-500 max-w-2xl mx-auto tracking-wide">
               Fill in the form below and we'll get back to you shortly to confirm your booking.
             </p>
           </Section>
