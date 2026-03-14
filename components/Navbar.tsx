@@ -2,10 +2,10 @@
 
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, Phone, X } from "lucide-react";
+import { Phone } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 
 const navLinks = [
@@ -17,7 +17,24 @@ const navLinks = [
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
   const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const isHeroTop = pathname === "/" && !isScrolled;
+
+  const showSolidNav = isOpen || !isHeroTop;
 
   const isActive = (href: string) => {
     if (href === "/") return pathname === "/";
@@ -27,82 +44,135 @@ export const Navbar = () => {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-colors duration-200 bg-white/80 backdrop-blur-md shadow-sm"
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        showSolidNav
+          ? "bg-white/90 backdrop-blur-md shadow-sm"
+          : "bg-transparent"
       )}
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-20">
-          <Link href="/" className="text-2xl font-bold text-primary flex items-center gap-2">
-            <span className="text-primary">Hygia</span>
+
+          {/* Logo */}
+          <Link href="/" className="text-2xl font-bold text-primary z-10">
+            Hygia
           </Link>
 
-          {/* Desktop Nav */}
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
+
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
                 className={cn(
-                  "text-base font-bold transition-colors relative group py-2",
-                  isActive(link.href) ? "text-primary" : "text-gray-600 hover:text-primary"
+                  "text-base font-bold relative group py-2 transition-colors",
+                  isActive(link.href)
+                    ? "text-primary"
+                    : isHeroTop
+                    ? "text-white hover:text-white"
+                    : "text-gray-600 hover:text-primary"
                 )}
               >
                 {link.name}
+
                 <span
                   className={cn(
-                    "absolute bottom-0 left-0 h-0.5 bg-primary transition-all duration-300 ease-in-out",
-                    isActive(link.href) ? "w-full" : "w-0 group-hover:w-full"
+                    "absolute bottom-0 left-0 h-0.5 transition-all duration-300",
+                    isActive(link.href)
+                      ? "w-full bg-primary"
+                      : "w-0 group-hover:w-full",
+                    isHeroTop ? "bg-white" : "bg-primary"
                   )}
                 />
               </Link>
             ))}
+
             <a href="tel:+919633702776">
-              <Button className="bg-primary font-bold hover:bg-primary/90 gap-2">
+              <Button
+                className={cn(
+                  "font-bold gap-2 transition hover:scale-105",
+                  isHeroTop
+                    ? "bg-white text-primary hover:bg-gray-100"
+                    : "bg-primary text-white hover:bg-primary/90"
+                )}
+              >
                 <Phone className="w-4 h-4" />
                 Book Now
               </Button>
             </a>
           </nav>
 
-          {/* Mobile Menu Button */}
+          {/* Hamburger Button */}
           <button
-            className="md:hidden p-2 text-gray-700"
             onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
+            className={cn(
+              "md:hidden relative w-8 h-8 flex flex-col justify-center items-center z-10",
+              isHeroTop && !isOpen ? "text-white" : "text-gray-800"
+            )}
+            aria-label="Toggle Menu"
           >
-            {isOpen ? <X /> : <Menu />}
+            {/* Top line */}
+            <span
+              className={cn(
+                "absolute h-0.5 w-6 bg-current transition-all duration-300",
+                isOpen ? "rotate-45" : "-translate-y-2"
+              )}
+            />
+
+            {/* Middle line */}
+            <span
+              className={cn(
+                "absolute h-0.5 w-6 bg-current transition-all duration-300",
+                isOpen ? "opacity-0" : "opacity-100"
+              )}
+            />
+
+            {/* Bottom line */}
+            <span
+              className={cn(
+                "absolute h-0.5 w-6 bg-current transition-all duration-300",
+                isOpen ? "-rotate-45" : "translate-y-2"
+              )}
+            />
           </button>
         </div>
       </div>
 
-      {/* Mobile Nav */}
+      {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="absolute top-20 left-0 right-0 p-4 md:hidden shadow-lg bg-white"
+            initial={{ y: "-100%" }}
+            animate={{ y: 0 }}
+            exit={{ y: "-100%" }}
+            transition={{ duration: 0.35, ease: "easeInOut" }}
+            className="fixed top-0 left-0 right-0 pt-24 pb-10 bg-white shadow-lg md:hidden"
           >
-            <nav className="flex flex-col gap-4">
+            <nav className="flex flex-col gap-6 px-6">
+
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
                   className={cn(
-                    "text-xl font-medium py-2 border-b border-gray-100 transition-colors",
-                    isActive(link.href) ? "text-primary" : "text-gray-700 hover:text-primary"
+                    "text-xl font-medium border-b pb-3",
+                    isActive(link.href)
+                      ? "text-primary"
+                      : "text-gray-700 hover:text-primary"
                   )}
                 >
                   {link.name}
                 </Link>
               ))}
-              <a href="tel:+917012003092">
-                <Button className="w-full bg-primary hover:bg-primary/90 mt-2">
+
+              <a href="tel:+919633702776">
+                <Button className="w-full mt-4 bg-primary hover:bg-primary/90">
                   Book Now
                 </Button>
               </a>
+
             </nav>
           </motion.div>
         )}

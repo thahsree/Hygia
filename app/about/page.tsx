@@ -1,4 +1,5 @@
 import { Footer } from "@/components/Footer";
+import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Navbar } from "@/components/Navbar";
 import { Section } from "@/components/Section";
 import { Eye, Sparkles, Star, Target, Users } from "lucide-react";
@@ -53,6 +54,19 @@ export default function AboutPage() {
             <p className="text-lg md:text-xl lg:text-2xl text-gray-600 mt-3 tracking-wide font-medium">
               Ready to Revive Your Spaces
             </p>
+          </Section>
+        </div>
+      </div>
+
+      {/* Decorative Full Width Image Area */}
+      <div className="bg-white pt-10 px-4 md:px-6">
+        <div className="container mx-auto">
+          <Section delay={0.2}>
+            <ImagePlaceholder 
+              className="w-full h-[300px] md:h-[500px] shadow-2xl rounded-3xl"
+              text="About Us Hero Image: Large group photo of the Hygia cleaning team in uniform"
+              iconSize="lg"
+            />
           </Section>
         </div>
       </div>

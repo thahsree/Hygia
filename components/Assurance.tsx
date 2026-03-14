@@ -1,4 +1,5 @@
 import { Check, Star } from "lucide-react";
+import { ImagePlaceholder } from "./ImagePlaceholder";
 import { Section } from "./Section";
 import { Button } from "./ui/button";
 
@@ -36,25 +37,31 @@ export const Assurance = () => {
           </Section>
 
           <Section delay={0.2}>
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
-              <h3 className="text-lg md:text-xl font-semibold mb-5 text-gray-700 border-b border-white/20 pb-3 tracking-wide">What's Included:</h3>
-              <ul className="space-y-4">
-                {[
-                  "Comprehensive cleaning of all rooms and surfaces",
-                  "Kitchen deep cleaning including appliances",
-                  "Bathroom sanitization and grout cleaning",
-                  "Floor and carpet deep cleaning",
-                  "Dusting and wiping of all surfaces and fixtures",
-                  "Window sills and door frames cleaning"
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <div className="mt-1 w-5 h-5 rounded-full bg-green-700 flex items-center justify-center flex-shrink-0">
-                      <Check className="w-3 h-3 text-white" />
-                    </div>
-                    <span className="text-base md:text-lg lg:text-lg text-gray-600 tracking-wide">{item}</span>
-                  </li>
-                ))}
-              </ul>
+            <div className="flex flex-col gap-6">
+              <ImagePlaceholder 
+                className="w-full h-64 md:h-80 shadow-lg rounded-2xl"
+                text="Premium Deep Cleaning Image: Detailed shot of surface cleaning or sanitized room"
+              />
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+                <h3 className="text-lg md:text-xl font-semibold mb-5 text-gray-700 border-b border-white/20 pb-3 tracking-wide">What's Included:</h3>
+                <ul className="space-y-4">
+                  {[
+                    "Comprehensive cleaning of all rooms and surfaces",
+                    "Kitchen deep cleaning including appliances",
+                    "Bathroom sanitization and grout cleaning",
+                    "Floor and carpet deep cleaning",
+                    "Dusting and wiping of all surfaces and fixtures",
+                    "Window sills and door frames cleaning"
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <div className="mt-1 w-5 h-5 rounded-full bg-green-700 flex items-center justify-center flex-shrink-0">
+                        <Check className="w-3 h-3 text-white" />
+                      </div>
+                      <span className="text-base md:text-lg lg:text-lg text-gray-600 tracking-wide">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </Section>
         </div>

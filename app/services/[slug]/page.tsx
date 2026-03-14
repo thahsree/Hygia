@@ -1,4 +1,5 @@
 import { Footer } from "@/components/Footer";
+import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Navbar } from "@/components/Navbar";
 import { Section } from "@/components/Section";
 import { Button } from "@/components/ui/button";
@@ -52,6 +53,11 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <div className="lg:col-span-2 space-y-8">
               <Section delay={0.1}>
                 <div className="bg-white rounded-xl p-8 shadow-sm">
+                  <ImagePlaceholder 
+                    className="w-full h-64 md:h-80 mb-8 rounded-xl"
+                    text={`${service.title} In-Action Image: Professional performing this specific cleaning service`}
+                    iconSize="lg"
+                  />
                   <h2 className="text-2xl max-md:text-xl font-heading font-semibold mb-6 text-gray-700 tracking-wide">What We Do</h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {service.details.map((detail, index) => (

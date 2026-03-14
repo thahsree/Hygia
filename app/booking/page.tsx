@@ -1,6 +1,7 @@
 "use client";
 
 import { Footer } from "@/components/Footer";
+import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Navbar } from "@/components/Navbar";
 import { Section } from "@/components/Section";
 import { Button } from "@/components/ui/button";
@@ -70,12 +71,23 @@ export default function BookingPage() {
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 md:px-6 text-center">
           <Section>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold tracking-wide mb-4 text-gray-700">
-              Book a Service
-            </h1>
-            <p className="text-lg md:text-xl lg:text-2xl text-gray-500 max-w-2xl mx-auto tracking-wide">
-              Fill in the form below and we'll get back to you shortly to confirm your booking.
-            </p>
+            <div className="flex flex-col md:flex-row items-center justify-between gap-8 text-left">
+              <div className="md:w-1/2">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold tracking-wide mb-4 text-gray-700">
+                  Book a Service
+                </h1>
+                <p className="text-lg md:text-xl lg:text-2xl text-gray-500 max-w-2xl tracking-wide">
+                  Fill in the form below and we'll get back to you shortly to confirm your booking.
+                </p>
+              </div>
+              <div className="md:w-1/2 w-full">
+                <ImagePlaceholder 
+                  className="w-full h-64 shadow-2xl rounded-2xl"
+                  text="Booking Header Image: Welcoming customer service representative or a bright pristine home"
+                  iconSize="md"
+                />
+              </div>
+            </div>
           </Section>
         </div>
       </div>

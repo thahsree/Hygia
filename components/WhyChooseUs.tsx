@@ -1,4 +1,5 @@
 import { features } from "@/lib/data";
+import { ImagePlaceholder } from "./ImagePlaceholder";
 import { Section } from "./Section";
 
 export const WhyChooseUs = () => {
@@ -27,6 +28,15 @@ export const WhyChooseUs = () => {
             </Section>
           ))}
         </div>
+
+        <Section delay={0.4}>
+          <div className="mt-16 max-w-4xl mx-auto">
+            <ImagePlaceholder 
+              className="w-full h-80 md:h-[400px] shadow-xl"
+              text="Why Choose Us Image: Happy team of professionals or a sparkling clean home environment"
+            />
+          </div>
+        </Section>
       </div>
     </div>
   );
