@@ -18,6 +18,7 @@ const navLinks = [
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
 
   const pathname = usePathname();
 
@@ -34,7 +35,7 @@ export const Navbar = () => {
 
   const isHeroTop = pathname === "/" && !isScrolled;
 
-  const showSolidNav = isOpen || !isHeroTop;
+  const showSolidNav = isOpen || isClosing || !isHeroTop;
 
   const isActive = (href: string) => {
     if (href === "/") return pathname === "/";
@@ -106,7 +107,10 @@ export const Navbar = () => {
 
           {/* Hamburger Button */}
           <button
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => {
+              if (isOpen) setIsClosing(true);
+              setIsOpen(!isOpen);
+            }}
             className={cn(
               "md:hidden relative w-8 h-8 flex flex-col justify-center items-center z-10",
               isHeroTop && !isOpen ? "text-white" : "text-gray-800"
@@ -142,7 +146,7 @@ export const Navbar = () => {
     </header>
 
       {/* Mobile Navigation */}
-      <AnimatePresence>
+      <AnimatePresence onExitComplete={() => setIsClosing(false)}>
         {isOpen && (
           <motion.div
             initial={{ y: "-100%" }}
@@ -157,7 +161,10 @@ export const Navbar = () => {
                 <Link
                   key={link.name}
                   href={link.href}
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => {
+                    setIsOpen(false);
+                    setIsClosing(true);
+                  }}
                   className={cn(
                     "text-xl font-medium border-b pb-3",
                     isActive(link.href)
