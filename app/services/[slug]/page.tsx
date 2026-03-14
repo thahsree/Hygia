@@ -43,7 +43,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             </Link>
             <Section>
               <h1 className="text-4xl md:text-5xl font-heading font-bold mb-4 tracking-wide text-gray-700">{service.title}</h1>
-              <p className="text-xl max-md:text-lg max-sm:text-base text-gray-500 max-w-2xl tracking-wide">{service.description}</p>
+              <p className="text-xl max-md:text-lg max-sm:text-base text-gray-500 max-w-2xl">{service.description}</p>
             </Section>
           </div>
         </div>
@@ -58,14 +58,14 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                     text={`${service.title} In-Action Image: Professional performing this specific cleaning service`}
                     iconSize="lg"
                   />
-                  <h2 className="text-2xl max-md:text-xl font-heading font-semibold mb-6 text-gray-700 tracking-wide">What We Do</h2>
+                  <h2 className="text-2xl max-md:text-xl font-heading font-semibold mb-6 text-gray-700 ">What We Do</h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {service.details.map((detail, index) => (
                       <div key={index} className="flex items-start gap-3">
                         <div className="mt-1 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 text-primary">
                           <Check className="w-3 h-3" />
                         </div>
-                        <span className="text-lg max-md:text-base text-gray-500 tracking-wide">{detail}</span>
+                        <span className="text-lg max-md:text-base text-gray-500 ">{detail}</span>
                       </div>
                     ))}
                   </div>
@@ -74,11 +74,11 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               
               <Section delay={0.2}>
                 <div className="bg-secondary/30 rounded-xl p-8 border border-primary/20">
-                  <h2 className="text-2xl max-md:text-xl font-heading font-semibold mb-4 text-gray-700 tracking-wide">Ready to book?</h2>
-                  <p className="text-lg max-md:text-base text-gray-500 mb-6 tracking-wide">
+                  <h2 className="text-2xl max-md:text-xl font-heading font-semibold mb-4 text-gray-700 ">Ready to book?</h2>
+                  <p className="text-lg max-md:text-base text-gray-500 mb-">
                     Get a sparkling clean space today. Contact us for a free quote tailored to your needs.
                   </p>
-                  <div className="flex flex-wrap gap-4">
+                  <div className="flex flex-wrap gap-4 mt-2">
                      <Link href="/booking">
                        <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
                          Book Now

@@ -73,10 +73,10 @@ export default function BookingPage() {
           <Section>
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 text-left">
               <div className="md:w-1/2">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold tracking-wide mb-4 text-gray-700">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-4 text-gray-700 max-sm:text-center">
                   Book a Service
                 </h1>
-                <p className="text-lg md:text-xl lg:text-2xl text-gray-500 max-w-2xl tracking-wide">
+                <p className="text-lg md:text-xl lg:text-2xl text-gray-500 max-w-2xl max-sm:text-center">
                   Fill in the form below and we'll get back to you shortly to confirm your booking.
                 </p>
               </div>

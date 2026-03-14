@@ -16,7 +16,7 @@ export const FAQ = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-semibold text-gray-700 mb-4 relative py-2 after:content-[''] after:block after:w-24 after:h-1.5 after:bg-primary after:mx-auto after:mt-2 after:rounded-full tracking-wide">
               Frequently Asked Questions</h2>
-            <p className="text-lg md:text-xl lg:text-2xl text-gray-500 max-w-2xl mx-auto tracking-wide">
+            <p className="text-lg md:text-xl lg:text-2xl text-gray-500 max-w-2xl mx-auto">
               Find answers to common questions about our cleaning services.
             </p>
           </div>

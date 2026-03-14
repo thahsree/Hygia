@@ -1,5 +1,4 @@
 import { Footer } from "@/components/Footer";
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Navbar } from "@/components/Navbar";
 import { Section } from "@/components/Section";
 import { services } from "@/lib/data";
@@ -45,20 +44,20 @@ export default function ServicesPage() {
           <Section>
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 text-left">
               <div className="md:w-1/2">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold tracking-wide mb-4 text-gray-700">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-4 text-gray-700 max-sm:text-center">
                   Our Services
                 </h1>
-                <p className="text-lg md:text-xl lg:text-2xl text-gray-500 max-w-2xl tracking-wide">
+                <p className="text-lg md:text-xl lg:text-2xl text-gray-500 max-w-2xl max-sm:text-center">
                   Professional cleaning solutions for every space — delivered with care, precision, and eco-friendly products.
                 </p>
               </div>
-              <div className="md:w-1/2 w-full">
+              {/* <div className="md:w-1/2 w-full">
                  <ImagePlaceholder 
                     className="w-full h-64 shadow-2xl rounded-2xl"
                     text="Services Header Image: Clean, organized array of premium cleaning text supplies"
                     iconSize="md"
                  />
-              </div>
+              </div> */}
             </div>
           </Section>
         </div>

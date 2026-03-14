@@ -42,6 +42,7 @@ export const Navbar = () => {
   };
 
   return (
+    <>
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
@@ -68,9 +69,9 @@ export const Navbar = () => {
                 className={cn(
                   "text-base font-bold relative group py-2 transition-colors",
                   isActive(link.href)
-                    ? "text-primary"
+                    ? "text-primary hover:text-primary"
                     : isHeroTop
-                    ? "text-white hover:text-white"
+                    ? "text-white hover:text-primary"
                     : "text-gray-600 hover:text-primary"
                 )}
               >
@@ -82,7 +83,7 @@ export const Navbar = () => {
                     isActive(link.href)
                       ? "w-full bg-primary"
                       : "w-0 group-hover:w-full",
-                    isHeroTop ? "bg-white" : "bg-primary"
+                    isHeroTop ? "bg-primary" : "bg-primary"
                   )}
                 />
               </Link>
@@ -138,6 +139,7 @@ export const Navbar = () => {
           </button>
         </div>
       </div>
+    </header>
 
       {/* Mobile Navigation */}
       <AnimatePresence>
@@ -147,7 +149,7 @@ export const Navbar = () => {
             animate={{ y: 0 }}
             exit={{ y: "-100%" }}
             transition={{ duration: 0.35, ease: "easeInOut" }}
-            className="fixed top-0 left-0 right-0 pt-24 pb-10 bg-white shadow-lg md:hidden"
+            className="fixed top-0 left-0 right-0 pt-24 pb-10 bg-white shadow-lg md:hidden z-40"
           >
             <nav className="flex flex-col gap-6 px-6">
 
@@ -177,6 +179,6 @@ export const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+    </>
   );
 };
