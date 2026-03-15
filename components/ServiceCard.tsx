@@ -1,6 +1,5 @@
 import { ArrowRight, Briefcase, HardHat, Home, Inspect, Sofa, Truck } from "lucide-react";
 import Link from "next/link";
-import { ImagePlaceholder } from "./ImagePlaceholder";
 import { Button } from "./ui/button";
 
 const iconMap: Record<string, any> = {
@@ -24,11 +23,11 @@ export const ServiceCard = ({ title, description, slug, iconName }: ServiceCardP
 
   return (
     <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 flex flex-col h-full border border-gray-100 group">
-      <ImagePlaceholder 
+      {/* <ImagePlaceholder 
         className="h-48 w-full mb-6 rounded-lg group-hover:shadow-md transition-shadow"
         text={`${title} Image (e.g. pristine home, office, sanitized carpet)`}
         iconSize="sm"
-      />
+      /> */}
       <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary transition-colors">
         <Icon className="w-10 h-10 text-primary group-hover:text-primary-foreground transition-colors" />
       </div>

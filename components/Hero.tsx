@@ -1,5 +1,4 @@
 import { ArrowRight } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { Section } from "./Section";
 import { Button } from "./ui/button";
@@ -8,13 +7,13 @@ export const Hero = () => {
   return (
     <div id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background Image */}
-      <Image 
+      {/* <Image 
         src="/premium home deep cleaning.jpg"
         alt="Premium Home Deep Cleaning"
         fill
         className="object-cover object-center z-0"
         priority
-      />
+      /> */}
       
       {/* Dark overlay for text readability */}
       <div className="absolute inset-0 bg-black/60 z-0" />

@@ -1,5 +1,4 @@
 import { Footer } from "@/components/Footer";
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Navbar } from "@/components/Navbar";
 import { Section } from "@/components/Section";
 import { Eye, Sparkles, Star, Target, Users } from "lucide-react";
@@ -59,7 +58,7 @@ export default function AboutPage() {
       </div>
 
       {/* Decorative Full Width Image Area */}
-      <div className="bg-white pt-10 px-4 md:px-6">
+      {/* <div className="bg-white pt-10 px-4 md:px-6">
         <div className="container mx-auto">
           <Section delay={0.2}>
             <ImagePlaceholder 
@@ -69,7 +68,7 @@ export default function AboutPage() {
             />
           </Section>
         </div>
-      </div>
+      </div> */}
 
       {/* About Text Section */}
       <div className="bg-white py-16">

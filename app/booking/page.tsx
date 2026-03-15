@@ -1,7 +1,6 @@
 "use client";
 
 import { Footer } from "@/components/Footer";
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Navbar } from "@/components/Navbar";
 import { Section } from "@/components/Section";
 import { Button } from "@/components/ui/button";
@@ -80,13 +79,13 @@ export default function BookingPage() {
                   Fill in the form below and we'll get back to you shortly to confirm your booking.
                 </p>
               </div>
-              <div className="md:w-1/2 w-full">
+              {/* <div className="md:w-1/2 w-full">
                 <ImagePlaceholder 
                   className="w-full h-64 shadow-2xl rounded-2xl"
                   text="Booking Header Image: Welcoming customer service representative or a bright pristine home"
                   iconSize="md"
                 />
-              </div>
+              </div> */}
             </div>
           </Section>
         </div>
