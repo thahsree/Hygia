@@ -17,8 +17,8 @@ const quicksand = Quicksand({
 
 export const metadata: Metadata = {
   title: "Hygia Cleaning",
-  description: "Professional deep cleaning services for homes and businesses.",
-  keywords: ['cleaning services', 'hygiene solutions', 'professional cleaners'],
+  description: "Professional deep cleaning services for homes and businesses in Kannur, Kerala.",
+  keywords: ['cleaning services', 'hygiene solutions', 'professional cleaners', 'deep cleaning', 'home cleaning', 'business cleaning', 'kannur cleaning', 'professional cleaners', 'hygienic cleaning', 'deep cleaning services', 'home cleaning services', 'business cleaning services', 'cleaning services in Kannur', 'cleaning services in Kerala', 'kannur cleaning services', 'kerala cleaning services', 'cleaning services in Kannur', 'cleaning services in Kerala', 'kannur cleaning services', 'kerala cleaning services'],
 };
 
 export default function RootLayout({

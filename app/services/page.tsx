@@ -17,7 +17,7 @@ const iconMap: Record<string, any> = {
 export const metadata = {
   title: "Our Services | Hygia Cleaning",
   description: "Browse all professional deep cleaning services offered by Hygia.",
-  keywords: ['cleaning services', 'hygiene solutions', 'professional cleaners'],
+  keywords: ['cleaning services in Kannur', 'hygiene solutions in Kannur', 'professional cleaners in Kannur'],
 };
 
 export default function ServicesPage() {
