@@ -18,6 +18,7 @@ const quicksand = Quicksand({
 export const metadata: Metadata = {
   title: "Hygia Cleaning",
   description: "Professional deep cleaning services for homes and businesses.",
+  keywords: ['cleaning services', 'hygiene solutions', 'professional cleaners'],
 };
 
 export default function RootLayout({

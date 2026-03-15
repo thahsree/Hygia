@@ -7,6 +7,24 @@ import { services } from "@/lib/data";
 import { ArrowLeft, ArrowRight, Check, Phone } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const service = services.find((s) => s.slug === slug);
+
+  if (!service) {
+    return {
+      title: "Service Not Found",
+      description: "The requested service could not be found."
+    };
+  }
+
+  return {
+    title: `${service.title} | Hygia Cleaning Services`,
+    description: service.description,
+  };
+}
 
 // This is correct for Next.js 15+ where params is a Promise
 export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
